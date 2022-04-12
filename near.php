@@ -55,7 +55,7 @@
 
     </div>
 </section>
-</main>
+
 
 <script type="application/javascript" src="https://cdn.jsdelivr.net/gh/Danail-Irinkov/bufferUMD@master/dist/bundle.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/near-api-js@0.41.0/dist/near-api-js.js"></script>
