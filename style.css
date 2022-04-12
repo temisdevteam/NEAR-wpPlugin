@@ -1,0 +1,193 @@
+html {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+* ,
+*:before,
+*:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+p {
+    font-size: 18px;
+}
+
+/* .wallet-section {
+    background: linear-gradient(90deg, #C7C5F4, #776BCC);
+    min-height: 100vh;
+} */
+
+.box {
+    /* width: 400px;
+    min-height: 100%; */
+    margin: auto;
+    padding: 40px 20px;
+    background-color: #fff;
+    border-radius: 24px;
+}
+
+.wallet-btn {
+    background: #fff;
+    font-size: 14px;
+    margin-top: 30px;
+    padding: 16px 20px;
+    border-radius: 26px;
+    border: 1px solid #D4D3E8;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    color: #4C489D;
+    box-shadow: 0px 2px 2px #5c5696;
+    cursor: pointer;
+    transition: .2s;
+}
+
+input {
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+    border-radius: 16px;
+    padding: 16px;
+    border: 1px solid rgb(187, 184, 184);
+    transition: all .03s ease-in-out;
+    margin-top: 10px;
+}
+
+.wallet-btn.btnSendToken {
+    margin-top: 10px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.token-transfer-successful-modal-text {
+    font-size: 20px;
+    font-weight: 600;
+    color: #399f00;
+    text-align: center;
+}
+
+.token-transfer-successful-modal {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+
+}
+
+.token-transfer-successful-modal-box {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 25%;
+}
+
+.token-transfer-successful-modal-close {
+    display: none;
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.token-transfer-successful-modal-loader {
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #313c44;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.contract-methods-section {
+    margin-top: 40px;
+}
+
+.contract-methods-label {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+#contract-methods-select {
+    width: 100%;
+    font-size: 16px;
+    padding: 8px 8px;
+    background-color: transparent;
+    border: 1px solid #b8b8b8;
+    border-radius: 8px;
+}
+
+input[type="submit"],button {
+    width: 90px;
+    height: 40px;
+    font-size: 12px;
+    border-radius: 12px;
+    border: 1px solid #D4D3E8;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #4C489D;
+    box-shadow: 0px 2px 2px #5c5696;
+    background-color: #ffffff;
+    cursor: pointer;
+    margin-top: 16px;
+    padding: 0;
+}
+input[type="submit"]:hover,button:hover{
+    background-color: #ffffff;
+}
+
+.d-flex{
+    display:flex;
+}
+.arguments-deposits-parent{
+    margin-top: 40px;
+    display: none;
+}
+.arguments-deposits-parent label{
+    margin-top: 16px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    display: block;
+}
+.contract-method-change-button{
+    margin-left: 10px;
+}
+.contract-method-form{
+    display: none;
+}
