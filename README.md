@@ -30,7 +30,7 @@ After you’re connected to your wallet you’ll be able to see your account id 
 - Balance
 - Send Tokens
 - Parsing Contract Methods
-- Call Contract Methods
+- Call/Change Contract Methods
 
 
 ## Documentation References
@@ -75,17 +75,41 @@ const wallet = new WalletConnection(near); </code>
 ### SignIN to wallet
 
 <pre>
-<code> const signIn = () => {
+<code>
   wallet.requestSignIn(
     "example-contract.testnet", // contract requesting access
-
     "Example App", // optional
     "http://YOUR-URL.com/success", // optional
     "http://YOUR-URL.com/failure" // optional
   );
-}; 
 </code>
 </pre>
+
+### SignOut from wallet
+<pre>
+<code>
+wallet.signOut();
+</code>
+</pre>
+
+### get authorized accound id
+<pre>
+<code>
+const walletAccountId = wallet.getAccountId();
+</code>
+</pre>
+
+### Send Tokens
+<pre>
+<code>
+// For sending tokens you need full access permission
+await account.sendMoney(
+    document.querySelector("#token-receiver").value, // receiver account
+    utils.format.parseNearAmount(document.querySelector("#token-amount").value.toString())
+);
+</code>
+</pre>
+
 
 ## Support and TODO list
 
