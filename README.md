@@ -67,6 +67,7 @@ The plugin is developed with php for bulding wordpress plugin and javascript for
 `  explorerUrl: "https://explorer.testnet.near.org",`
 `}; `
 
+
 // connect to NEAR
 `const near = await connect(config);`
 
