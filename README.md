@@ -73,10 +73,8 @@ const wallet = new WalletConnection(near); </code>
 </pre>
 
 ### SignIN to wallet
-
 <pre>
-<code>
-  wallet.requestSignIn(
+<code>wallet.requestSignIn(
     "example-contract.testnet", // contract requesting access
     "Example App", // optional
     "http://YOUR-URL.com/success", // optional
@@ -86,23 +84,14 @@ const wallet = new WalletConnection(near); </code>
 </pre>
 
 ### SignOut from wallet
-<pre>
-<code>
-wallet.signOut();
-</code>
-</pre>
+<pre><code>wallet.signOut();</code></pre>
 
 ### get authorized accound id
-<pre>
-<code>
-const walletAccountId = wallet.getAccountId();
-</code>
-</pre>
+<pre><code>const walletAccountId = wallet.getAccountId();</code></pre>
 
 ### Send Tokens
 <pre>
-<code>
-// For sending tokens you need full access permission
+<code>// For sending tokens you need full access permission
 await account.sendMoney(
     document.querySelector("#token-receiver").value, // receiver account
     utils.format.parseNearAmount(document.querySelector("#token-amount").value.toString())
@@ -110,19 +99,50 @@ await account.sendMoney(
 </code>
 </pre>
 
+### Load Contract
+<pre>
+<code>const contract = new nearAPI.Contract(
+  account, // the account object that is connecting
+  "example-contract.testnet",
+  {
+    // name of contract you're connecting to
+    viewMethods: ["getMessages"], // view methods do not change state but usually return a value
+    changeMethods: ["addMessage"], // change methods modify state
+    sender: account, // account object to initialize and sign transactions.
+  }
+);</code>
+</pre>
 
-## Support and TODO list
+### Call contract
+#### Change Method
+<pre>
+<code>await contract.method_name(
+  {
+    arg_name: "value", // argument name and value - pass empty object if no args required
+  },
+  "300000000000000", // attached GAS (optional)
+  "1000000000000000000000000" // attached deposit in yoctoNEAR (optional)
+);</code>
+</pre>
 
-If you want to support the project NEAR @ danail.near
-Or want to work on adding features,
-please submit a Feature Request
-or contact me by email: dan@ezlaunder.com
+#### View Method
+<pre>
+<code>const response = await contract.view_method_name();
+console.log(response);</code>
+</pre>
 
 ## Pending Features:
 
 - Displaying authorized account’s recent transactions list
 - Nft transfer
 - More…
+
+## Support
+
+If you want to support the project NEAR @ danail.near
+Or want to work on adding features,
+please submit a Feature Request
+or contact me by email: dan@ezlaunder.com
 
 ## MIT License
 
