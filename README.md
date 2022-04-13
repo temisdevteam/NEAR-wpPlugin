@@ -33,11 +33,17 @@ After you’re connected to your wallet you’ll be able to see your account id 
 ## Documentation References
 
 https://wallet.near.org/ (Create your NEAR Wallet)
+
 https://www.near.university
+
 https://examples.near.org
+
 https://docs.near.org/docs/api/javascript-library
+
 https://github.com/near/near-api-js
+
 https://github.com/encody/near-contract-parser
+
 https://github.com/near/near-indexer-for-explorer
 
 
