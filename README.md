@@ -56,8 +56,8 @@ The plugin is developed with php for bulding wordpress plugin and javascript for
 
 ### Connect to NEAR
 
-<code> const { connect, keyStores, WalletConnection } = nearAPI;</br>
- const config = { 
+<code> const { connect, keyStores, WalletConnection } = nearAPI;<br />
+ const config = { <br/>
  networkId: "testnet", 
   keyStore: new keyStores.BrowserLocalStorageKeyStore(), 
   nodeUrl: "https://rpc.testnet.near.org",
