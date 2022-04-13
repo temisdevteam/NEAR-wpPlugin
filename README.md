@@ -56,29 +56,29 @@ The plugin is developed with php for bulding wordpress plugin and javascript for
 
 ### Connect to NEAR
 
-` const { connect, keyStores, WalletConnection } = nearAPI;<br />
- const config = { <br />
- networkId: "testnet",<br />
-  keyStore: new keyStores.BrowserLocalStorageKeyStore(),<br />
-  nodeUrl: "https://rpc.testnet.near.org",<br />
-  walletUrl: "https://wallet.testnet.near.org",<br />
-  helperUrl: "https://helper.testnet.near.org",<br />
+` const { connect, keyStores, WalletConnection } = nearAPI;—
+ const config = { —
+ networkId: "testnet",
+  keyStore: new keyStores.BrowserLocalStorageKeyStore(),
+  nodeUrl: "https://rpc.testnet.near.org",
+  walletUrl: "https://wallet.testnet.near.org",
+  helperUrl: "https://helper.testnet.near.org",
   explorerUrl: "https://explorer.testnet.near.org",
-}; <br />
-// connect to NEAR<br />
-const near = await connect(config);<br />
-// create wallet connection<br />
+}; 
+// connect to NEAR
+const near = await connect(config);
+// create wallet connection
 const wallet = new WalletConnection(near); `
 
 ### SignIN to wallet
 
-` const signIn = () => {<br />
-  wallet.requestSignIn(<br />
-    "example-contract.testnet", // contract requesting access<br />
-    "Example App", // optional<br />
-    "http://YOUR-URL.com/success", // optional<br />
-    "http://YOUR-URL.com/failure" // optional<br />
-  );<br />
+` const signIn = () => {
+  wallet.requestSignIn(
+    "example-contract.testnet", // contract requesting access
+    "Example App", // optional
+    "http://YOUR-URL.com/success", // optional
+    "http://YOUR-URL.com/failure" // optional
+  );
 }; `
 
 ## Support and TODO list
