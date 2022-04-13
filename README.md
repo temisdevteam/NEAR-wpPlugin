@@ -57,8 +57,8 @@ The plugin is developed with php for bulding wordpress plugin and javascript for
 ### Connect to NEAR
 
 <pre>
-<code> const { connect, keyStores, WalletConnection } = nearAPI;<br />
- const config = { <br/>
+<code> const { connect, keyStores, WalletConnection } = nearAPI;
+ const config = { 
  networkId: "testnet", 
   keyStore: new keyStores.BrowserLocalStorageKeyStore(), 
   nodeUrl: "https://rpc.testnet.near.org",
@@ -74,7 +74,8 @@ const wallet = new WalletConnection(near); </code>
 
 ### SignIN to wallet
 
-` const signIn = () => {
+<pre>
+<code> const signIn = () => {
   wallet.requestSignIn(
     "example-contract.testnet", // contract requesting access
 
@@ -82,7 +83,9 @@ const wallet = new WalletConnection(near); </code>
     "http://YOUR-URL.com/success", // optional
     "http://YOUR-URL.com/failure" // optional
   );
-}; `
+}; 
+</code>
+</pre>
 
 ## Support and TODO list
 
