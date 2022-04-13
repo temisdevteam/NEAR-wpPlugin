@@ -5,7 +5,7 @@
         <h1>Wordpress Near</h1>
         <button class="wallet-btn btnLogin">Login</button>
         <div class="account-info-section">
-            <p class="accountId">Hello <span></span></p>
+            <p class="accountId">Your account ID <span></span></p>
             <p class="accountBalance">Your Balance: <span></span></p>
         </div>
         <div class="send-token-section">
